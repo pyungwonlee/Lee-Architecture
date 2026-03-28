@@ -1,44 +1,240 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Lee Architecture</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* THEME SETTINGS 
+   To switch to Deep Forest Green:
+   --bg: #0b1a14;
+   --text: #ffffff;
+   --accent: #1e3a2f;
+*/
 
-    <header>
-        <div class="container nav-wrapper">
-            <div class="logo">
-                <a href="index.html">LEE ARCHITECTURE</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+    --grey-light: #f4f4f4;
+    --grey-border: #e0e0e0;
+    --text-muted: #666666;
+    --max-width: 1200px;
+}
 
-    <main class="container">
-        <div class="section-label">Contact</div>
-        
-        <div class="contact-details">
-            <p>For new project enquiries and collaborations:</p>
-            <br>
-            <a href="mailto:office@leearchitecture.com.au" class="contact-link">office@leearchitecture.com.au</a>
-            <p class="phone">+61 (0) 7 0000 0000</p>
-        </div>
-    </main>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <footer>
-        <div class="container footer-wrapper">
-            <p>&copy; 2026 Lee Architecture</p>
-        </div>
-    </footer>
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
 
-</body>
-</html>
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* NAVIGATION */
+header {
+    padding: 60px 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--text);
+}
+
+/* HERO SECTION */
+.hero {
+    margin: 100px 0 160px 0;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    letter-spacing: -0.03em;
+}
+
+.sub-hero {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* PROJECT GRID */
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--grey-border);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 30px;
+}
+
+.grid-item h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: var(--grey-light);
+}
+
+.action-link {
+    margin-top: 60px;
+}
+
+.action-link a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* PROJECTS PAGE SPECIFIC */
+.project-list {
+    margin-bottom: 100px;
+}
+
+.project-list .desc {
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* ABOUT PAGE */
+.about-content {
+    max-width: 800px;
+    margin-bottom: 100px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.experience-list {
+    margin-top: 60px;
+    border-top: 1px solid var(--grey-border);
+}
+
+.exp-item {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--grey-border);
+}
+
+.exp-item span {
+    flex: 0 0 200px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* CONTACT PAGE */
+.contact-details {
+    padding: 60px 0 160px 0;
+}
+
+.contact-link {
+    font-size: 2rem;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 2px solid var(--text);
+}
+
+.phone {
+    margin-top: 20px;
+    color: var(--text-muted);
+}
+
+/* FOOTER */
+footer {
+    padding: 80px 0;
+    border-top: 1px solid var(--grey-border);
+    margin-top: 100px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h1 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .exp-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-link {
+        font-size: 1.2rem;
+    }
+}
