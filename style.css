@@ -54,6 +54,13 @@ header {
     letter-spacing: 0;
 }
 
+.logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+    opacity: 0.8;
+}
+
 nav ul {
     list-style: none;
     display: flex;
