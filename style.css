@@ -11,7 +11,7 @@
     --grey-light: #f4f4f4;
     --grey-border: #e0e0e0;
     --text-muted: #666666;
-    --max-width: 1200px;
+    --max-width: 1100px;
 }
 
 * {
@@ -23,8 +23,9 @@
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -46,11 +47,11 @@ header {
 }
 
 .logo a {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--text);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 nav ul {
@@ -62,13 +63,14 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0;
     transition: color 0.2s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--text);
 }
 
@@ -79,24 +81,24 @@ nav a:hover, nav a.active {
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 1.2;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.25;
     margin-bottom: 30px;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
 }
 
 .sub-hero {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
     max-width: 600px;
 }
 
 /* PROJECT GRID */
 .section-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    text-transform: none;
+    letter-spacing: 0;
     color: var(--text-muted);
     border-bottom: 1px solid var(--grey-border);
     padding-bottom: 10px;
@@ -112,7 +114,7 @@ h1 {
 .grid-item h3 {
     font-size: 1rem;
     margin-top: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .grid-item p {
@@ -133,7 +135,7 @@ h1 {
 .action-link a {
     text-decoration: none;
     color: var(--text);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9rem;
 }
 
@@ -144,7 +146,7 @@ h1 {
 
 .project-list .desc {
     margin-top: 10px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* ABOUT PAGE */
@@ -154,10 +156,11 @@ h1 {
 }
 
 .about-content h2 {
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.9rem;
+    font-weight: 300;
     margin-bottom: 40px;
     line-height: 1.3;
+    letter-spacing: 0;
 }
 
 .about-content p {
@@ -178,8 +181,8 @@ h1 {
 
 .exp-item span {
     flex: 0 0 200px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-transform: none;
     color: var(--text-muted);
 }
 
@@ -189,10 +192,10 @@ h1 {
 }
 
 .contact-link {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text);
     text-decoration: none;
-    border-bottom: 2px solid var(--text);
+    border-bottom: 1px solid var(--text);
 }
 
 .phone {
@@ -219,7 +222,10 @@ footer {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    h1 { font-size: 2rem; }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -227,13 +233,16 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+
     .grid {
         grid-template-columns: 1fr;
     }
+
     .exp-item {
         flex-direction: column;
         gap: 10px;
     }
+
     .contact-link {
         font-size: 1.2rem;
     }
